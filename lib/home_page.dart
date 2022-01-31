@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:getwidget/colors/gf_color.dart';
+import 'package:getwidget/components/avatar/gf_avatar.dart';
 import 'package:vlogging_app/const_widgets/card.dart';
 
 class HomePage extends StatefulWidget {
@@ -24,15 +26,62 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Colors.transparent,
             leadingWidth: MediaQuery.of(context).size.width,
             flexibleSpace:  FlexibleSpaceBar(
-              title: const Text('SliverAppBar'),
+              title: const Text('Vlog app'),
               background: Image.asset("assets/images/bgd.jpg")
             ),
           ),
-          const SliverToBoxAdapter(
+           SliverToBoxAdapter(
             child: SizedBox(
-              height: 20,
+              height: 100,
               child: Center(
-                child: Text('Scroll to see the SliverAppBar in effect.'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children:  const [
+                    GFAvatar(
+                      backgroundColor: GFColors.DANGER,
+                      child: Icon(
+                        Icons.menu_open,
+                        color: Colors.white,
+                      ),
+                    ),
+                    GFAvatar(
+                      backgroundColor: GFColors.DARK,
+                      child: Icon(
+                        Icons.person_outline,
+                        color: Colors.white,
+                      ),
+                    ),
+                    GFAvatar(
+                      backgroundColor: GFColors.DANGER,
+                      child: Icon(
+                        Icons.facebook_outlined,
+                        color: Colors.white,
+                      ),
+                    ),
+                    GFAvatar(
+                      backgroundColor: GFColors.DARK,
+                      child: Icon(
+                        Icons.mail_outline,
+                        color: Colors.white,
+                      ),
+
+                    ),
+                    GFAvatar(
+                      backgroundColor: GFColors.DANGER,
+                      child: Icon(
+                        Icons.home,
+                        color: Colors.white,
+                      ),
+                    ),
+                    GFAvatar(
+                      backgroundColor: GFColors.DARK,
+                      child: Icon(
+                        Icons.help,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
